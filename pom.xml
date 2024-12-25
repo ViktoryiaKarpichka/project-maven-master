@@ -45,6 +45,10 @@
         <resources>
             <resource>
                 <directory>${project.build.directory}/dependencies</directory>
+                                <targetPath>lib</targetPath>
+                                <includes>
+                                    <include>*.jar</include>
+                                </includes>
             </resource>
         </resources>
 
@@ -103,6 +107,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
                             <mainClass>org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader</mainClass>
                         </manifest>
                         <manifestEntries>
